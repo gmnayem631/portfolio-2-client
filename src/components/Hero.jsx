@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="max-w-7xl mx-auto py-10 mt-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
+      className="max-w-7xl mx-auto py-10 mt-10 flex flex-col-reverse md:flex-row items-center justify-between gap-12"
     >
       {/* Left content */}
       <div className="flex flex-col gap-5 justify-center">
@@ -19,7 +19,7 @@ const Hero = () => {
           <Typewriter
             words={[
               " a Front-End Developer.",
-              " Crafting modern web experiences.",
+              " Crafting Modern Web Experiences.",
               " Fond of Learning New Tech.",
             ]}
             loop={0}
@@ -41,7 +41,6 @@ const Hero = () => {
           </button>
         </div>
       </div>
-
       {/* Right content */}
       <div className="flex-1 flex justify-center max-w-xs md:max-w-md lg:max-w-xl">
         <img
@@ -50,6 +49,7 @@ const Hero = () => {
           className="w-72 h-72 md:w-auto md:h-auto object-contain rounded-full"
         />
       </div>
+      ;
     </div>
   );
 };
