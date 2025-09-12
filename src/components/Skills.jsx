@@ -133,27 +133,28 @@ const techStackIcons = [
 
 const Skills = () => {
   return (
-    <div id="skills" className="max-w-7xl mx-auto my-5 py-10 px-4">
-      <div className="w-full h-full">
-        {/* Gradient heading but lightened */}
-        <h2 className="text-3xl font-bold mb-10">Tech Stack</h2>
+    <section id="skills" className="max-w-7xl mx-auto my-10 px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        Tech Stack
+      </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {techStackIcons.map((tech, idx) => {
-            const Icon = tech.icon;
-            return (
-              <div
-                key={idx}
-                className="flex flex-col items-center justify-center gap-2 p-5 rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl bg-gradient-to-r from-[#F5F7FA] via-[#E6ECFF] to-[#FDFBFF] text-text"
-              >
-                <Icon style={{ color: tech.color, fontSize: "2.5rem" }} />
-                <span className="font-semibold">{tech.name}</span>
-              </div>
-            );
-          })}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {techStackIcons.map((tech, idx) => {
+          const Icon = tech.icon;
+          return (
+            <div
+              key={idx}
+              className="skill-card flex flex-col items-center justify-center gap-2 p-5 rounded-xl shadow-md 
+                         transform transition duration-300 hover:scale-105 hover:shadow-xl
+                         bg-gradient-to-r from-[#f9f9fa] via-[#eef2ff] to-[#fdfdfd] text-text"
+            >
+              <Icon style={{ color: tech.color, fontSize: "2.5rem" }} />
+              <span className="font-semibold">{tech.name}</span>
+            </div>
+          );
+        })}
       </div>
-    </div>
+    </section>
   );
 };
 

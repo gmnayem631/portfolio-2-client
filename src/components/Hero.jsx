@@ -52,7 +52,7 @@ const Hero = () => {
         <div className="">
           <button className="btn btn-primary text-white">
             <BiSolidContact />
-            Get in Touch
+            <a href="#contact">Get in Touch</a>
           </button>
         </div>
       </div>

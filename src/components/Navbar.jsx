@@ -1,21 +1,21 @@
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 const links = (
   <>
     <li>
-      <a>Home</a>
+      <a href="#home">Home</a>
     </li>
     <li>
-      <a>About</a>
+      <a href="#about">About</a>
     </li>
     <li>
-      <a>Skills</a>
+      <a href="#skills">Skills</a>
     </li>
     <li>
-      <a>Projects</a>
+      <a href="#projects">Projects</a>
     </li>
-    <li className="lg:hidden">
-      <a>Contact</a>
+    <li>
+      <a href="#contact">Contact</a>
     </li>
   </>
 );
@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <a className="">
-            <img src={logo} alt="" className="h-10 w-10 cursor-pointer" />
+            <img src={logo} alt="" className="h-12 w-12 cursor-pointer" />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">

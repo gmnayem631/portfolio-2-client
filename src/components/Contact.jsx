@@ -18,11 +18,9 @@ const socialLinks = [
 ];
 
 const Contact = () => {
-  console.log(socialLinks);
-
   return (
     <section id="contact" className="max-w-7xl mx-auto py-10">
-      <div className="container grid lg:grid-cols-2 lg:items-stretch">
+      <div className="container grid lg:grid-cols-2 lg:items-stretch gap-5">
         <div className="flex flex-col gap-3 my-auto">
           <h2 className="text-3xl font-semibold">Let's Connect</h2>
           <p className="max-w-2/3">
