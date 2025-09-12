@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Left content */}
       <div className="flex flex-col gap-5 justify-center text-center md:text-left">
         <h2 className="font-semibold text-3xl lg:text-5xl leading-tight">
-          Hi, I'm Gulam Mustafa Nayem
+          Hi, I'm Gulam Mustafa Nayem Redeploy
         </h2>
         <p className="text-lg md:text-2xl">
           <Typewriter
