@@ -34,10 +34,18 @@ const Hero = () => {
           delivering seamless user experiences.
         </p>
         <div className="flex gap-5 text-3xl">
-          <a href="http://linkedin.com/in/gulam-mustafa-nayem" target="_blank">
+          <a
+            href="http://linkedin.com/in/gulam-mustafa-nayem"
+            target="_blank"
+            className="ring-inset ring-2 p-2 rounded-2xl hover:bg-zinc-50"
+          >
             <FaLinkedinIn />
           </a>
-          <a href="http://github.com/gmnayem631" target="_blank">
+          <a
+            href="http://github.com/gmnayem631"
+            target="_blank"
+            className="ring-inset ring-2 p-2 rounded-2xl hover:bg-zinc-50"
+          >
             <FaGithub />
           </a>
         </div>
