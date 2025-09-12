@@ -1,6 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import heroImg from "../assets/nayem.png";
 import { BiSolidContact } from "react-icons/bi";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -14,11 +15,9 @@ const Hero = () => {
           Hi, I'm Gulam Mustafa Nayem
         </h2>
         <p className="text-lg md:text-2xl">
-          {" "}
-          I Am
           <Typewriter
             words={[
-              " a Front-End Developer.",
+              " A Front-End Developer.",
               " Crafting Modern Web Experiences.",
               " Fond of Learning New Tech.",
             ]}
@@ -34,6 +33,14 @@ const Hero = () => {
           I build clean, responsive web applications using React and Tailwind,
           delivering seamless user experiences.
         </p>
+        <div className="flex gap-5 text-3xl">
+          <a href="http://linkedin.com/in/gulam-mustafa-nayem" target="_blank">
+            <FaLinkedinIn />
+          </a>
+          <a href="http://github.com/gmnayem631" target="_blank">
+            <FaGithub />
+          </a>
+        </div>
         <div className="">
           <button className="btn btn-primary text-white">
             <BiSolidContact />

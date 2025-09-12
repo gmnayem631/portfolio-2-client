@@ -1,44 +1,68 @@
 import Lottie from "lottie-react";
 import developerAnimation from "../../public/yoga-developer.json";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="max-w-7xl mx-auto py-20 px-4">
-      <h2 className="text-3xl font-bold mb-10 text-center">About Me</h2>
+    <section id="about" className="bg-bg py-16 px-6">
+      {/* Section Title */}
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        About Me
+      </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Left - Image */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Left - Lottie Animation */}
         <div className="flex justify-center">
-          <Lottie animationData={developerAnimation} loop={true}></Lottie>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="rounded-xl shadow-lg p-6 border-2 border-primary/20"
+          >
+            <Lottie
+              animationData={developerAnimation}
+              loop={true}
+              className="w-64 md:w-80 lg:w-[28rem]"
+            />
+          </motion.div>
         </div>
 
         {/* Right - Text */}
-        <div className="flex flex-col gap-5">
-          <p className="text-lg text-text">
-            I’m Gulam Mustafa Nayem, a Front-End Developer passionate about
-            crafting clean, modern, and responsive web applications. With React
-            and Tailwind, I deliver intuitive interfaces and seamless user
-            experiences.
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="bg-bg rounded-2xl shadow-xl p-8 border-l-4 border-primary flex flex-col gap-6"
+        >
+          <p className="text-lg leading-relaxed">
+            I’m a <span className="font-semibold">Front-End Developer</span>{" "}
+            passionate about building real-life, interactive, and impactful
+            applications. I enjoy transforming ideas into intuitive and
+            responsive user interfaces using{" "}
+            <span className="font-semibold">React</span> and{" "}
+            <span className="font-semibold">Tailwind CSS</span>.
           </p>
 
-          <ul className="space-y-2">
-            <li className="flex items-center gap-2">
-              <span className="text-accent">🚀</span> Strong in React & Tailwind
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-accent">🔧</span> Experience with Firebase &
-              MongoDB
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-accent">🎨</span> Focus on responsive,
-              user-centered design
-            </li>
-          </ul>
+          <p className="text-lg leading-relaxed">
+            My journey began in 2018 when I first experimented with HTML to
+            create colorful tables and forms. Discovering CSS soon after sparked
+            my curiosity, and by the end of 2024, I had committed to pursuing
+            development professionally.
+          </p>
 
-          <button className="bg-primary text-white px-6 py-2 rounded-2xl hover:bg-accent transition-colors w-fit">
+          <p className="text-lg leading-relaxed">
+            Beyond coding, I’m a competitive chess player with a FIDE rapid
+            rating of <span className="font-semibold">1623</span>, and I also
+            enjoy reading both fiction and nonfiction to broaden my perspective.
+          </p>
+
+          {/* Button */}
+          <button className="cursor-pointer mt-4 bg-primary text-white px-6 py-3 rounded-xl transition-colors w-fit shadow-md font-medium">
             Let’s Connect
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
