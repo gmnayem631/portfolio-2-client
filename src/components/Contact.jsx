@@ -19,15 +19,15 @@ const socialLinks = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="max-w-7xl mx-auto py-10">
-      <div className="container grid lg:grid-cols-2 lg:items-stretch gap-5">
-        <div className="flex flex-col gap-3 my-auto">
+    <section id="contact" className="max-w-7xl mx-auto py-10 px-4">
+      <div className="grid lg:grid-cols-2 gap-5">
+        <div className="flex flex-col gap-3 my-auto text-center lg:text-left">
           <h2 className="text-3xl font-semibold">Let's Connect</h2>
-          <p className="max-w-2/3">
+          <p className="max-w-md mx-auto lg:mx-0">
             Get in touch to bring your ideas to life with clean, responsive, and
             user-friendly web applications.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-center lg:justify-start mt-2">
             {socialLinks.map((link, idx) => {
               const Icon = link.icon;
               return (
@@ -50,7 +50,7 @@ const Contact = () => {
           action=""
           className="p-6 rounded-2xl flex flex-col gap-6 bg-gradient-to-r from-[#F5F7FA] via-[#E6ECFF] to-[#FDFBFF] text-text"
         >
-          <div className="md:grid md:grid-cols-2 md:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
             {/* Name */}
             <div className="flex flex-col mb-4">
               <label htmlFor="name" className="mb-2 font-medium text-text">
