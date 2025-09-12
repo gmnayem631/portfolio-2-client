@@ -52,7 +52,7 @@ const techStackIcons = [
   },
   {
     category: "Frontend",
-    name: "React JS",
+    name: "React.js",
     icon: SiReact,
     color: "#61DAFB",
   },
@@ -70,8 +70,14 @@ const techStackIcons = [
   },
   {
     category: "Backend",
-    name: "Express JS",
+    name: "Express.js",
     icon: SiExpress,
+    color: "#000000",
+  },
+  {
+    category: "Backend",
+    name: "JWT Authentication",
+    icon: SiJsonwebtokens,
     color: "#000000",
   },
   {
@@ -80,12 +86,12 @@ const techStackIcons = [
     icon: SiMongodb,
     color: "#47A248",
   },
-  {
-    category: "Backend",
-    name: "Node JS",
-    icon: SiNodedotjs,
-    color: "#339933",
-  },
+  //   {
+  //     category: "Backend",
+  //     name: "Node.js",
+  //     icon: SiNodedotjs,
+  //     color: "#339933",
+  //   },
   {
     category: "Tools & Platforms",
     name: "Vercel",
@@ -138,7 +144,7 @@ const Skills = () => {
             return (
               <div
                 key={idx}
-                className="flex flex-col items-center justify-center gap-2 p-5 rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl bg-gradient-to-r from-[#F5F7FA] via-[#E6ECFF] to-[#FDFBFF] text-gray-800"
+                className="flex flex-col items-center justify-center gap-2 p-5 rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl bg-gradient-to-r from-[#F5F7FA] via-[#E6ECFF] to-[#FDFBFF] text-text"
               >
                 <Icon style={{ color: tech.color, fontSize: "2.5rem" }} />
                 <span className="font-semibold">{tech.name}</span>
