@@ -62,7 +62,7 @@ const Navbar = () => {
           <a
             href="https://drive.google.com/file/d/11T0dNCr4R8LPmFwY2jBRlE3RUB3zgMMa/view?usp=sharing"
             target="_blank"
-            className="btn btn-primary text-primary text-white hidden lg:inline-flex"
+            className="btn btn-primary text-white hidden lg:inline-flex"
           >
             Resume
           </a>
