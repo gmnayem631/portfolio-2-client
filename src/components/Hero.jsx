@@ -1,7 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import heroImg from "../assets/nayem.png";
 import { BiSolidContact } from "react-icons/bi";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -48,9 +48,16 @@ const Hero = () => {
           >
             <FaGithub />
           </a>
+          <a
+            href="https://wa.me/8801521759634"
+            target="_blank"
+            className="ring-inset ring-2 p-2 rounded-2xl hover:bg-zinc-50"
+          >
+            <FaWhatsapp />
+          </a>
         </div>
         <div className="mt-4 flex justify-center md:justify-start">
-          <button className="btn btn-primary text-white">
+          <button className="btn btn-primary btn-outline hover:text-white">
             <BiSolidContact />
             <a href="#contact">Get in Touch</a>
           </button>

@@ -7,10 +7,7 @@ const ProjectCard = ({ projects }) => {
     projects;
 
   return (
-    <div
-      className="relative p-6 rounded-2xl bg-gradient-to-r from-[#F5F7FA] via-[#E6ECFF] to-[#FDFBFF] 
-                    text-text ring-1 ring-inset ring-zinc-200 shadow-md hover:shadow-xl transition-all duration-300"
-    >
+    <div className="relative p-6 rounded-2xl bg-gradient-to-r from-[#F5F7FA] via-[#E6ECFF] to-[#FDFBFF] text-text ring-1 ring-inset ring-zinc-200 shadow-md hover:shadow-xl transition-all duration-300 h-auto md:h-full">
       {/* Project Image */}
       <figure className="rounded-lg overflow-hidden group relative">
         <img src={image} alt={name} className="w-full h-52 object-cover" />

@@ -60,7 +60,12 @@ const About = () => {
 
           {/* Button */}
           <button className="cursor-pointer mt-4 bg-primary text-white px-6 py-3 rounded-xl transition-colors w-fit shadow-md font-medium">
-            Let’s Connect
+            <a
+              href="https://linkedin.com/in/gulam-mustafa-nayem"
+              target="_blank"
+            >
+              Let’s Connect
+            </a>
           </button>
         </motion.div>
       </div>
