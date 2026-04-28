@@ -56,11 +56,13 @@ const Hero = () => {
             <FaWhatsapp />
           </a>
         </div>
-        <div className="mt-4 flex justify-center md:justify-start">
+        <div className="mt-4">
           <button className="btn btn-primary btn-outline hover:text-white">
-            <BiSolidContact />
-            <a href="http://linkedin.com/in/gulam-mustafa-nayem">
-              Get in Touch
+            <a
+              href="https://drive.google.com/file/d/11T0dNCr4R8LPmFwY2jBRlE3RUB3zgMMa/view?usp=sharing"
+              target="_blank"
+            >
+              Download Resume
             </a>
           </button>
         </div>

@@ -1,3 +1,4 @@
+import { BiSolidContact } from "react-icons/bi";
 import logo from "../assets/logo.png";
 
 const links = (
@@ -22,7 +23,7 @@ const links = (
 
 const Navbar = () => {
   return (
-    <div className="bg-bg shadow-sm">
+    <div className="bg-bg shadow-sm sticky top-0 z-50">
       <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <a className="">
@@ -59,13 +60,17 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a
-            href="https://drive.google.com/file/d/11T0dNCr4R8LPmFwY2jBRlE3RUB3zgMMa/view?usp=sharing"
-            target="_blank"
-            className="btn btn-primary text-white hidden lg:inline-flex"
-          >
-            Resume
-          </a>
+          <div className="flex justify-center md:justify-start">
+            <button className="btn btn-primary hover:text-white">
+              <BiSolidContact />
+              <a
+                href="http://linkedin.com/in/gulam-mustafa-nayem"
+                target="_blank"
+              >
+                Connect
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </div>
