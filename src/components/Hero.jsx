@@ -59,7 +59,9 @@ const Hero = () => {
         <div className="mt-4 flex justify-center md:justify-start">
           <button className="btn btn-primary btn-outline hover:text-white">
             <BiSolidContact />
-            <a href="#contact">Get in Touch</a>
+            <a href="http://linkedin.com/in/gulam-mustafa-nayem">
+              Get in Touch
+            </a>
           </button>
         </div>
       </div>
