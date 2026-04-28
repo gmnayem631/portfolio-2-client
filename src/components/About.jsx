@@ -37,25 +37,27 @@ const About = () => {
           className="bg-bg rounded-2xl shadow-xl p-8 border-l-4 border-primary flex flex-col gap-6"
         >
           <p className="text-lg leading-relaxed">
-            I’m a <span className="font-semibold">Front-End Developer</span>{" "}
-            passionate about building real-life, interactive, and impactful
-            applications. I enjoy transforming ideas into intuitive and
-            responsive user interfaces using{" "}
-            <span className="font-semibold">React</span> and{" "}
-            <span className="font-semibold">Tailwind CSS</span>.
+            I'm a <span className="font-semibold">Front-End Developer</span> who
+            enjoys turning ideas into interfaces that actually feel good to use.
+            I work mainly with <span className="font-semibold">React</span> and{" "}
+            <span className="font-semibold">Tailwind CSS</span>, and I've been
+            pushing into full-stack development with{" "}
+            <span className="font-semibold">Express.js</span> and{" "}
+            <span className="font-semibold">REST APIs.</span> I can build and
+            connect both ends of an app.
           </p>
 
           <p className="text-lg leading-relaxed">
-            My journey began in 2018 when I first experimented with HTML to
-            create colorful tables and forms. Discovering CSS soon after sparked
-            my curiosity, and by the end of 2024, I had committed to pursuing
-            development professionally.
+            I've been exploring <span className="font-semibold">Next.js</span>{" "}
+            on the side and genuinely enjoy it; it's where I'm headed next.
+            Right now React is my comfort zone, and I'm working on making
+            Next.js the same.
           </p>
 
           <p className="text-lg leading-relaxed">
-            Beyond coding, I’m a competitive chess player with a FIDE rapid
-            rating of <span className="font-semibold">1623</span>, and I also
-            enjoy reading both fiction and nonfiction to broaden my perspective.
+            Outside of coding, I'm a competitive chess player with a FIDE rapid
+            rating of <span className="font-semibold">1623</span>, a game that
+            keeps me sharp and honest about how much there still is to learn.
           </p>
 
           {/* Button */}
