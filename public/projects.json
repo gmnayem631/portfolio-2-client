@@ -14,34 +14,32 @@
     "description": "A web platform connecting medical camp organizers and participants with role-based dashboards, secure payments, and real-time notifications.",
     "liveLink": "https://camp-well.web.app/",
     "githubLink": "https://github.com/gmnayem631/camp-well-client",
-    "challenges": "Integrating stripe payment method for the first time was a challenge itself",
-    "improvements": "There some places where the UI security could be improved"
+    "challenges": "Integrating stripe payment method for the first time was a challenge itself"
   },
   {
-    "name": "TrackBack",
-    "image": "https://i.ibb.co.com/CpdV4pXW/trackback.png",
+    "name": "CheckShelf",
+    "image": "https://i.ibb.co.com/VYQqX3z5/checkshelf-home.png",
     "techStack": [
-      "React.js",
+      "React",
       "Tailwindcss",
-      "Express.js",
+      "DaisyUI",
+      "chessboard.js",
       "Firebase",
-      "MongoDB",
-      "Firebase"
+      "Express.js",
+      "MongoDB"
     ],
-    "description": "Tracks and finds your lost items. Connects the owner with their lost items",
-    "liveLink": "https://track-back-bdfda.web.app/",
-    "githubLink": "https://github.com/gmnayem631/track-back-client",
-    "challenges": "Doing a large and interactive project is always challenging - whether to maintain the work flow, or managing all the bugs",
-    "improvements": "UI design can be improved further with better user experience as well"
+    "description": "A chess book and course selling website with AI Book Recommendation feature for chess learners.",
+    "liveLink": "https://checkshelf.netlify.app/",
+    "githubLink": "https://github.com/gmnayem631/checkshelf-client",
+    "challenges": "Implemented an AI-powered chess book suggestion according to user's chess skills through Google Gemini 2.5 Flash"
   },
   {
-    "name": "English Janala",
-    "image": "https://i.ibb.co.com/NnGzQx4q/Screenshot-2.png",
-    "techStack": ["HTML5", "CSS3", "Tailwindcss", "JS", "DOM"],
-    "description": "Interactive platform to improve English skills through lessons, and vocabulary building, on JavaScript concepts.",
-    "liveLink": "https://a06-english-janala.surge.sh/",
-    "githubLink": "https://github.com/gmnayem631/english-janala",
-    "challenges": "Working with APIs for the first time was tough",
-    "improvements": "The missing data could be an improvement"
+    "name": "Plantora",
+    "image": "https://i.ibb.co.com/wrbDtJdL/plantora-home.png",
+    "techStack": ["Next.js", "Tailwindcss", "Firebase"],
+    "description": "A platform to showcase and manage your personal indoor plant collection.",
+    "liveLink": "https://plantora-orbin.vercel.app/",
+    "githubLink": "https://github.com/gmnayem631/plantora",
+    "challenges": "Implementing the Next.js concepts right after the day I literally learned it was fun and challenging at the same time"
   }
 ]

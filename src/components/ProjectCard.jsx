@@ -2,56 +2,87 @@ import React from "react";
 import { LuExternalLink } from "react-icons/lu";
 import { SiGithub } from "react-icons/si";
 
-const ProjectCard = ({ projects }) => {
+const ProjectCard = ({ projects, index }) => {
   const { name, image, techStack, description, liveLink, githubLink } =
     projects;
+  const num = String(index + 1).padStart(2, "0");
 
   return (
-    <div className="relative p-6 rounded-2xl bg-gradient-to-r from-[#F5F7FA] via-[#E6ECFF] to-[#FDFBFF] text-text ring-1 ring-inset ring-zinc-200 shadow-md hover:shadow-xl transition-all duration-300 h-auto md:h-full">
-      {/* Project Image */}
-      <figure className="rounded-lg overflow-hidden group relative">
-        <img src={image} alt={name} className="w-full h-52 object-cover" />
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <h3 className="text-xl font-bold text-white">
-            <a href={liveLink} target="_blank">
-              {name}
-            </a>
-          </h3>
+    <div className="group grid grid-cols-[220px_1fr] rounded-xl overflow-hidden border border-primary/10 bg-[#f5f2ea] hover:-translate-y-0.5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 relative">
+      {/* Hover accent bar */}
+      <span className="absolute left-0 top-0 bottom-0 w-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-l-xl" />
+
+      {/* Image */}
+      <div className="relative overflow-hidden bg-[#d8d3c8]">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noreferrer"
+            className="text-bg italic text-sm"
+            style={{ fontFamily: "'PT Serif', serif" }}
+          >
+            View Live ↗
+          </a>
         </div>
-      </figure>
+      </div>
 
       {/* Content */}
-      <div className="mt-4 flex flex-col gap-3">
-        {/* Description */}
-        <p className="text-sm text-text line-clamp-3">{description}</p>
+      <div className="relative p-5 flex flex-col gap-2">
+        {/* Faint number */}
+        <span
+          className="absolute top-2 right-3 text-4xl font-bold text-primary/10 leading-none pointer-events-none select-none"
+          style={{ fontFamily: "'PT Serif', serif" }}
+        >
+          {num}
+        </span>
 
-        <div className="flex flex-wrap gap-2 mt-2">
+        <h3
+          className="text-lg font-bold text-primary/90 leading-snug"
+          style={{ fontFamily: "'PT Serif', serif" }}
+        >
+          {name}
+        </h3>
+
+        <p className="text-xs text-text/70 leading-relaxed line-clamp-3">
+          {description}
+        </p>
+
+        {/* Tech tags */}
+        <div className="flex flex-wrap gap-1.5 mt-1">
           {techStack.map((tech, i) => (
             <span
               key={i}
-              className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-[#ede9fe] to-[#dbeafe] text-[#4d2b91] font-medium shadow-sm"
+              className="text-[0.65rem] font-semibold px-2.5 py-0.5 rounded-full border border-primary/25 text-primary bg-primary/5 uppercase tracking-wide"
             >
               {tech}
             </span>
           ))}
         </div>
 
-        {/* Buttons */}
-        <div className="flex gap-3 mt-4">
+        {/* Actions */}
+        <div className="flex gap-2 mt-auto pt-2">
           <a
             href={liveLink}
             target="_blank"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-medium shadow-md transition"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-primary text-bg text-xs font-semibold tracking-wide hover:bg-primary/80 transition-colors"
           >
-            <LuExternalLink size={18} />
+            <LuExternalLink size={13} />
             Live
           </a>
           <a
             href={githubLink}
             target="_blank"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-medium shadow-md transition"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-md border border-primary text-primary text-xs font-semibold tracking-wide hover:bg-primary/8 transition-colors"
           >
-            <SiGithub size={18} />
+            <SiGithub size={13} />
             GitHub
           </a>
         </div>
