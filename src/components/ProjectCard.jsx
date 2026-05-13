@@ -5,27 +5,29 @@ import { SiGithub } from "react-icons/si";
 const ProjectCard = ({ projects, index }) => {
   const { name, image, techStack, description, liveLink, githubLink } =
     projects;
+
   const num = String(index + 1).padStart(2, "0");
 
   return (
-    <div className="group grid grid-cols-[220px_1fr] rounded-xl overflow-hidden border border-primary/10 bg-[#f5f2ea] hover:-translate-y-0.5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 relative">
-      {/* Hover accent bar */}
-      <span className="absolute left-0 top-0 bottom-0 w-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-l-xl" />
+    <div className="group relative flex flex-col md:flex-row overflow-hidden rounded-2xl border border-primary/10 bg-[#f5f2ea] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+      {/* Accent line */}
+      <span className="absolute left-0 top-0 h-full w-1 bg-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
       {/* Image */}
-      <div className="relative overflow-hidden bg-[#d8d3c8]">
+      <div className="relative md:w-[340px] lg:w-[380px] overflow-hidden bg-[#d8d3c8] shrink-0">
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="h-[220px] md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+
+        {/* Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center bg-primary/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <a
             href={liveLink}
             target="_blank"
             rel="noreferrer"
-            className="text-bg italic text-sm"
-            style={{ fontFamily: "'PT Serif', serif" }}
+            className="rounded-full border border-white/40 bg-white/10 px-5 py-2 text-sm text-white backdrop-blur-sm transition hover:bg-white hover:text-primary"
           >
             View Live ↗
           </a>
@@ -33,57 +35,54 @@ const ProjectCard = ({ projects, index }) => {
       </div>
 
       {/* Content */}
-      <div className="relative p-5 flex flex-col gap-2">
-        {/* Faint number */}
-        <span
-          className="absolute top-2 right-3 text-4xl font-bold text-primary/10 leading-none pointer-events-none select-none"
-          style={{ fontFamily: "'PT Serif', serif" }}
-        >
+      <div className="relative flex flex-1 flex-col p-6 md:p-7">
+        {/* Background Number */}
+        <span className="pointer-events-none absolute right-5 top-3 select-none text-6xl font-bold leading-none text-primary/5">
           {num}
         </span>
 
-        <h3
-          className="text-lg font-bold text-primary/90 leading-snug"
-          style={{ fontFamily: "'PT Serif', serif" }}
-        >
+        {/* Title */}
+        <h3 className="relative z-10 text-2xl font-bold text-primary/90">
           {name}
         </h3>
 
-        <p className="text-xs text-text/70 leading-relaxed line-clamp-3">
+        {/* Description */}
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-text/75">
           {description}
         </p>
 
-        {/* Tech tags */}
-        <div className="flex flex-wrap gap-1.5 mt-1">
+        {/* Tech Stack */}
+        <div className="mt-5 flex flex-wrap gap-2">
           {techStack.map((tech, i) => (
             <span
               key={i}
-              className="text-[0.65rem] font-semibold px-2.5 py-0.5 rounded-full border border-primary/25 text-primary bg-primary/5 uppercase tracking-wide"
+              className="rounded-full border border-primary/15 bg-primary/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary"
             >
               {tech}
             </span>
           ))}
         </div>
 
-        {/* Actions */}
-        <div className="flex gap-2 mt-auto pt-2">
+        {/* Buttons */}
+        <div className="mt-6 flex flex-wrap gap-3">
           <a
             href={liveLink}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-primary text-bg text-xs font-semibold tracking-wide hover:bg-primary/80 transition-colors"
+            className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:bg-primary/90"
           >
-            <LuExternalLink size={13} />
-            Live
+            <LuExternalLink size={15} />
+            Live Demo
           </a>
+
           <a
             href={githubLink}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-md border border-primary text-primary text-xs font-semibold tracking-wide hover:bg-primary/8 transition-colors"
+            className="flex items-center gap-2 rounded-lg border border-primary/20 px-4 py-2 text-sm font-medium text-primary transition-all duration-300 hover:bg-primary/5"
           >
-            <SiGithub size={13} />
-            GitHub
+            <SiGithub size={15} />
+            Source Code
           </a>
         </div>
       </div>
